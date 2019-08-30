@@ -22,4 +22,8 @@ node {
       junit '**/target/surefire-reports/TEST-*.xml'
       archiveArtifacts 'target/*.jar'
    }
+      stage('Results') {
+         build job: '/freestyle-petclinic/', quietPeriod: 50
+      }
+
 }
